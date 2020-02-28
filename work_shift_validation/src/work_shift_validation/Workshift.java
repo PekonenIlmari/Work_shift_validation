@@ -36,7 +36,7 @@ public class Workshift {
 		
 		try {
 			date = formatDate.parse(tempDay);
-			System.out.println("OK Date");
+			//System.out.println("OK Date");
 			setTime();
 		} catch (ParseException e) {
 			System.out.println("Invalid date.");
@@ -71,9 +71,9 @@ public class Workshift {
 		
 		try {
 			startTime = formatTime.parse(tempStartTime);
-			System.out.println("OK start time");
+			//System.out.println("OK start time");
 			endTime = formatTime.parse(tempEndTime);
-			System.out.println("OK end time");
+			//System.out.println("OK end time");
 			if(startTime.after(endTime)) {
 				System.out.println("Starting time can't before ending time.");
 			} else {
@@ -97,7 +97,7 @@ public class Workshift {
 		float duration = hours + minutes;
 		
 		if (duration > 16) {
-			System.out.println("The maximum length of the workshift has been exceeded.");
+			System.out.println("The maximum length of the workshift has been exceeded by " + (duration - 16) + " hours.");
 		} else {
 			return duration;
 		}
